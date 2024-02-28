@@ -1,14 +1,12 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParam } from "react-use";
+import dynamic from "next/dynamic";
 
-import Form from "@components/Form";
+const Form = dynamic(() => import("@components/Form"), { ssr: false });
 
 const UpdatePrompt = () => {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const promptId = searchParams.get("id");
+  const promptId = useSearchParam("id");
 
   const [post, setPost] = useState({ prompt: "", tag: "" });
   const [submitting, setIsSubmitting] = useState(false);
@@ -43,7 +41,10 @@ const UpdatePrompt = () => {
       });
 
       if (response.ok) {
-        router.push("/");
+        // Ensure this is executed only on the client side
+        if (typeof window !== "undefined") {
+          window.location.href = "/"; // Or use router.push("/") if preferred
+        }
       }
     } catch (error) {
       console.log(error);
