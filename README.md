@@ -12,10 +12,10 @@ Website Link: https://promptopedia-rks.vercel.app/
 # Tech Stack Used:
 
 <ul>
-  Frontend + Backend: Next.js | MongoDB
-  Authentication: https://clouds.google.com
-  Styled by: Tailwind CSS
-  Deployed on: Vercel
+  <li>Frontend + Backend: Next.js | MongoDB</li>
+  <li>Authentication: https://clouds.google.com</li>
+  <li>Styled by: Tailwind CSS</li>
+  <li>Deployed on: Vercel</li>
 </ul>
 
 # Scope of improvement:
