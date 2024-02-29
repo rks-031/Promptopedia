@@ -12,19 +12,27 @@ Website Link: https://prompt-six-tau.vercel.app/
 # Tech Stack Used:
 
 <ul>
-  <li>Frontend + Backend: Next.js | MongoDB</li>
-  <li>Authentication: https://clouds.google.com</li>
-  <li>Styled by: Tailwind CSS</li>
-  <li>Deployed on: Vercel</li>
+  Frontend + Backend: Next.js | MongoDB
+  Authentication: https://clouds.google.com
+  Styled by: Tailwind CSS
+  Deployed on: Vercel
 </ul>
 
 # Scope of improvement:
 
 <ul>
-  <li>Implement Search</li>
-  <li>Implement Click on Tag</li>
-  <li>Implement View Other Profiles</li>
+  Implement Search
+  Implement Click on Tag
+  Implement View Other Profiles
 </ul>
+
+# To contribute to this project follow the steps below:
+  1. Fork and clone the repository.<br/>
+  2. Install the required npm packages (using npm i <package_name>) [ P.S: your terminal will automatically generate an error in the absence of a required dependency]<br/>
+  3. Commit your changes:  `git commit -m "Add some feature"`<br/>
+  4. Push to the branch: `git push origin my-feature`<br/>
+  5. Open a pull request. [ P.S: Resolve all the merge conflicts before making a PR]<br/>
+
 
 # Project Maintainer:
 <a href="https://github.com/rks-031" style="text-decoration: none">`Rajnish Kumar Singh`</a>
