@@ -7,7 +7,7 @@ Discover & Share AI-powered prompts.
 
 ![image](https://github.com/rks-031/Promptopedia/assets/103258259/12c1e86e-0869-4ed9-bf08-70fbde641822)
 
-Website Link: https://prompt-six-tau.vercel.app/
+Website Link: https://promptopedia-rks.vercel.app/
 
 # Tech Stack Used:
 
