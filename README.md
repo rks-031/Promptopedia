@@ -13,7 +13,7 @@ Website Link: https://promptopedia-rks.vercel.app/
 
 <ol>
   <li>Frontend + Backend: Next.js | MongoDB</li>
-  <li>Authentication: https://clouds.google.com</li>
+  <li>Authentication: https://console.cloud.google.com/</li>
   <li>Styled by: Tailwind CSS</li>
   <li>Deployed on: Vercel</li>
 </ol>
