@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Promptopedia: Your own AI prompts encyclopedia.
 
-## Getting Started
+Prompotopedia is an open-source AI programming tool to discover, create and share creative prompts in the modern world.
+<br/>
+Discover & Share AI-powered prompts.
+<br/>
 
-First, run the development server:
+![image](https://github.com/rks-031/Promptopedia/assets/103258259/12c1e86e-0869-4ed9-bf08-70fbde641822)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Website Link: https://promptopedia-rks.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Tech Stack Used:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<ol>
+  <li>Frontend + Backend: Next.js | MongoDB</li>
+  <li>Authentication: https://console.cloud.google.com/</li>
+  <li>Styled by: Tailwind CSS</li>
+  <li>Deployed on: Vercel</li>
+</ol>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Scope of improvement:
 
-## Learn More
+<ol>
+  <li>Implement Search</li>
+  <li>Implement Click on Tag</li>
+  <li>Implement View Other Profiles</li>
+</ol>
 
-To learn more about Next.js, take a look at the following resources:
+# To contribute to this project follow the steps below:
+  1. Fork and clone the repository.<br/>
+  2. Install the required npm packages (using npm i <package_name>) [ P.S: your terminal will automatically generate an error in the absence of a required dependency]<br/>
+  3. Commit your changes:  `git commit -m "Add some feature"`<br/>
+  4. Push to the branch: `git push origin my-feature`<br/>
+  5. Open a pull request. [ P.S: Resolve all the merge conflicts before making a PR]<br/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Project Maintainer:
+<a href="https://github.com/rks-031" style="text-decoration: none">`Rajnish Kumar Singh`</a>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
