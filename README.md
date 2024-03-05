@@ -21,9 +21,9 @@ Website Link: https://promptopedia-rks.vercel.app/
 # Scope of improvement:
 
 <ol>
-  <li>Implement Search</li>
-  <li>Implement Click on Tag</li>
-  <li>Implement View Other Profiles</li>
+  <li>Implement Search [done] </li>
+  <li>Implement Click on Tag [done] </li>
+  <li>Implement View Other Profiles [done] </li>
 </ol>
 
 # To contribute to this project follow the steps below:
