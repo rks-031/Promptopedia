@@ -23,7 +23,7 @@ Website Link: https://promptopedia-rks.vercel.app/
 <ol>
   <li>Implement Search [done] </li>
   <li>Implement Click on Tag [done] </li>
-  <li>Implement View Other Profiles [done] </li>
+  <li>Implement View Other Profiles</li>
 </ol>
 
 # To contribute to this project follow the steps below:
