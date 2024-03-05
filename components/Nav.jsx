@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -37,6 +36,10 @@ const Nav = () => {
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="black_btn">
               Create Post
+            </Link>
+
+            <Link href="/other-profiles" className="black_btn">
+              View Other Profiles
             </Link>
 
             <button type="button" onClick={signOut} className="outline_btn">
@@ -100,6 +103,13 @@ const Nav = () => {
                   onClick={() => setToggleDropdown(false)}
                 >
                   Create Prompt
+                </Link>
+                <Link
+                  href="/view-other-profiles"
+                  className="dropdown_link"
+                  onClick={() => setToggleDropdown(false)}
+                >
+                  View Other Profiles
                 </Link>
                 <button
                   type="button"

@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
-import PromptCard from "./PromptCard"; // Assuming PromptCard is imported from another file
+import React, { useState, useEffect } from "react";
+import PromptCard from "./PromptCard";
 
 const Feed = () => {
   const [allPosts, setAllPosts] = useState([]);
@@ -24,26 +24,31 @@ const Feed = () => {
     fetchPosts();
   }, []);
 
-  const filterPrompts = (searchtext) => {
-    const regex = new RegExp(searchtext, "i");
+  const filterPrompts = (searchText) => {
+    const regex = new RegExp(searchText, "i");
     return allPosts.filter(
       (item) =>
-        regex.test(item.creator.username) ||
+        (item.creator && regex.test(item.creator.username)) ||
         regex.test(item.tag) ||
-        regex.test(item.prompt)
+        (item.prompts &&
+          item.prompts.some((prompt) => regex.test(prompt.prompt)))
     );
   };
 
   const handleSearchChange = (e) => {
-    clearTimeout(searchTimeout);
     setSearchText(e.target.value);
+  };
 
-    setSearchTimeout(
-      setTimeout(() => {
-        const searchResult = filterPrompts(e.target.value);
-        setSearchedResults(searchResult);
-      }, 500)
-    );
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      clearTimeout(searchTimeout);
+      setSearchTimeout(
+        setTimeout(() => {
+          const searchResult = filterPrompts(searchText);
+          setSearchedResults(searchResult);
+        }, 500)
+      );
+    }
   };
 
   const handleTagClick = (tagName) => {
@@ -55,39 +60,39 @@ const Feed = () => {
 
   return (
     <section className="feed">
-      <form className="relative w-full flex-center">
+      <form
+        className="relative w-full flex-center"
+        onSubmit={(e) => e.preventDefault()} // Prevent default form submission
+      >
         <input
           type="text"
           placeholder="Search for a tag or a username"
           value={searchText}
           onChange={handleSearchChange}
+          onKeyDown={handleKeyDown} // Call handleKeyDown on key press
           required
           className="search_input peer"
         />
       </form>
 
       {/* All Prompts */}
-      {searchText ? (
-        <div className="mt-16 prompt_layout">
-          {searchedResults.map((post) => (
-            <PromptCard
-              key={post._id}
-              post={post}
-              handleTagClick={handleTagClick}
-            />
-          ))}
-        </div>
-      ) : (
-        <div className="mt-16 prompt_layout">
-          {allPosts.map((post) => (
-            <PromptCard
-              key={post._id}
-              post={post}
-              handleTagClick={handleTagClick}
-            />
-          ))}
-        </div>
-      )}
+      <div className="mt-16 prompt_layout">
+        {searchedResults.length > 0
+          ? searchedResults.map((post) => (
+              <PromptCard
+                key={post._id}
+                post={post}
+                handleTagClick={handleTagClick}
+              />
+            ))
+          : allPosts.map((post) => (
+              <PromptCard
+                key={post._id}
+                post={post}
+                handleTagClick={handleTagClick}
+              />
+            ))}
+      </div>
     </section>
   );
 };
