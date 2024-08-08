@@ -12,7 +12,7 @@ const Home = () => {
         </span>
       </h1>
       <p className="desc text-center">
-        Prompotopedia is an open-source AI programming tool for modern world to
+        Promptopedia is an open-source AI programming tool for modern world to
         discover, create and share creative prompts.
       </p>
       {/*Feed*/}
